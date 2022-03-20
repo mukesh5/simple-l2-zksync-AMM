@@ -31,3 +31,8 @@ zkSyncDeploy: {
 ````
 yarn hardhat compile
 ````
+
+#### 4. Deploy the contract. Make sure you have enough ETH for the transactions in your wallet for Goerli testnet.
+````
+yarn hardhat deploy-zksync
+````
