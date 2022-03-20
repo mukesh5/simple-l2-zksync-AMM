@@ -10,12 +10,12 @@ This doesn't have any fee or incentive mechanism.
 
 ## Steps to run the project
 
-### 1. Clone the project and install the dependencies (make sure you have latest node and hardhat installed)
+#### 1. Clone the project and install the dependencies (make sure you have latest node and hardhat installed)
 ````
 yarn install 
 ````
 
-### 2. Compile the contracts (to see if they are successfully compiled check if "artifacts-zk" and "cache-zk" folders are created in your repo
+#### 2. Compile the contracts (to see if they are successfully compiled check if "artifacts-zk" and "cache-zk" folders are created in your repo
 ````
 yarn hardhat compile
 ````
