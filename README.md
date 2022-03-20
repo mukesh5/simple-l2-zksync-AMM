@@ -1,1 +1,1 @@
-# simple-l2-zksync-AMM
+# A Simple L2 Zksync AMM
