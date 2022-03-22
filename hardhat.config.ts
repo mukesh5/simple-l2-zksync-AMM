@@ -18,7 +18,7 @@ module.exports = {
   },
   zkSyncDeploy: {
     zkSyncNetwork: "https://zksync2-testnet.zksync.dev",
-    ethNetwork: "https://goerli.infura.io/v3/", // Can also be the RPC URL of the network (e.g. `https://goerli.infura.io/v3/<API_KEY>`)
+    ethNetwork: "https://goerli.infura.io/v3/55510d4a86664e87bf3043b4cd4389ef", // Can also be the RPC URL of the network (e.g. `https://goerli.infura.io/v3/<API_KEY>`)
   },
   networks: {
     // To compile with zksolc, this must be the default network.
