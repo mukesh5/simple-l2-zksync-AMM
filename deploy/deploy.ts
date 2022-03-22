@@ -14,7 +14,7 @@ export default async function (hre: HardhatRuntimeEnvironment) {
 
   const provider = new Provider("https://zksync2-testnet.zksync.dev");
 
-  const wallet = new Wallet("0x7c808534f3347f98f0c0b8ca2ac381e6e68846f1de919201ed0f16a5ab2e14f3", provider);
+  const wallet = new Wallet("", provider);
   // const withdrawL2 = await wallet.withdraw({
   //   token: utils.ETH_ADDRESS,
   //   amount: ethers.utils.parseEther("0.01"),
