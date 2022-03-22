@@ -38,7 +38,6 @@ export default async function (hre: HardhatRuntimeEnvironment) {
   //   "function getAllowanceERC20(address erc20TokenSmartContractAddress) public view returns(uint)"]);
   // const smartbank = new Contract('0x53c6A2a24c6Db3d756d2aDBc2111BC883E5b6CAC', contractInterface, provider);
 
-  // console.log(await smartbank.getContractBalance());
 
   // Deposit some funds to L2 in order to be able to perform L2 transactions.
   // console.log('Depositing.. ETH in L2 ')
@@ -53,9 +52,6 @@ export default async function (hre: HardhatRuntimeEnvironment) {
   // console.log('ETH deposited to L2');
 
   // Deploy this contract. The returned object will be of a `Contract` type, similarly to ones in `ethers`.
-  // `greeting` is an argument for contract constructor.
-  //const greeting = "Hi there!";
-  // console.log(artifact);
   console.log('Deploying contract')
   const ammContract = await deployer.deploy(artifact, []);
 
