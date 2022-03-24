@@ -61,27 +61,45 @@ export default async function (hre: HardhatRuntimeEnvironment) {
 
   // Call the deployed contract and check the pool. It should be empty at the start
   const initialPoolDetails = await ammContract.getPoolDetails();
-  console.log(initialPoolDetails);
+  console.log('Initial Pool details');
+  for(let i=0; i< initialPoolDetails.length; i++){ 
+    console.log(ethers.utils.formatEther(initialPoolDetails[i]));
+  }
+  // console.log(ethers.utils.formatEther(initialPoolDetails));
 
   
   // Add some tokens to your address
-  const addSomeTokens = await ammContract.faucet(50, 50);
+  const addSomeTokens = await ammContract.faucet(ethers.utils.parseEther('1'), ethers.utils.parseEther('1'));
   
   // Check your holdings
-  const myHoldings = await ammContract.getHoldings();
-  console.log(myHoldings);
+  console.log("Your holdings")
+  const myHoldings = await ammContract.getMyHoldings();
 
+  for(let i=0; i< myHoldings.length; i++){ 
+    console.log(ethers.utils.formatEther(myHoldings[i]));
+  }
 
   // Become a liquidity provider by providing your tokens
-  await ammContract.provide(50, 50);
+  console.log('Become liquidity provider');
+  await ammContract.provide(ethers.utils.parseEther('1'), ethers.utils.parseEther('1'));
 
 
   // check if you have got shares
-  const myshareHoldings = await ammContract.getHoldings();
-  console.log(myshareHoldings);
+  console.log('Check your shares')
+  const myshareHoldings = await ammContract.getMyHoldings();
+  for(let i=0; i< myshareHoldings.length; i++){ 
+    console.log(ethers.utils.formatEther(myshareHoldings[i]));
+  }
 
+  const poolDetails = await ammContract.getPoolDetails();
+  console.log('Pool details');
+  for(let i=0; i< poolDetails.length; i++){ 
+    console.log(ethers.utils.formatEther(poolDetails[i]));
+  }
+  //
   // withdraw some tokens
-  const withdrawedTokens = await ammContract.withdraw(20, 20);
+  console.log('withdraw tokens')
+  const withdrawedTokens = await ammContract.withdraw(20);
   console.log(withdrawedTokens);
 
 }
