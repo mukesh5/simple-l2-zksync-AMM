@@ -3,6 +3,7 @@
 This is a simple AMM which stores two tokens and it's balance in the smart contract and exposes the functions to withdraw, swap.
 This doesn't have any fee or incentive mechanism.
 It based on the simple formula which is used by the Uniswap protocol i.e. p*q = K (Where K is the total liquidity in the pool and p and q the token1 and token2 respectively)
+Deployed at 0x00D15247D811e5E1E2476078596De53C68754eee (zksync testnet) test account used (0xDEcc3156Bd9826a0034D829C35Dc3679Be5ac529)
 
 ## Frameworks
  - Solidity (v0.8.0)
